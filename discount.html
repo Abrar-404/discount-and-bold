@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Price Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Discount Price Calculator</h1>
+  <label for="originalPrice">Original Price: $</label>
+  <input type="number" id="originalPrice" min="0" step="0.01"><br>
+  <label for="discountPercentage">Discount Percentage: %</label>
+  <input type="number" id="discountPercentage" min="0" max="100" step="1"><br>
+  <button id="calculateButton">Calculate Discounted Price</button>
+  <p id="discountedPrice"></p>
+  <script>
+    document.getElementById('calculateButton').addEventListener('click', function () {
+      var originalPrice = parseFloat(document.getElementById('originalPrice').value);
+      var discountPercentage = parseFloat(document.getElementById('discountPercentage').value);
+
+      if (isNaN(originalPrice) || isNaN(discountPercentage)) {
+        document.getElementById('discountedPrice').textContent = 'Please enter valid numbers.';
+      } else {
+        var discountedPrice = originalPrice * (1 - discountPercentage / 100);
+        document.getElementById('discountedPrice').textContent = 'Discounted Price: $' + discountedPrice.toFixed(2);
+      }
+    });
+  </script>
+</body>
+
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Discount Price Calculator</title>
+</head>
+
+<body>
+  <h1>Discount Price Calculator</h1>
+
+  <div>
+    <span>Original Price: $</span>
+    <input type="number" id="originalPrice" min="0">
+  </div>
+
+  <div>
+    <span>Discount Percentage: %</span>
+    <input type="number" id="discountPercentage" min="0" max="100">
+  </div>
+
+  <button onclick="calculateDiscount()">Calculate Discount</button>
+
+  <div>
+    <h2>Discounted Price: $<span id="discountedPrice">0.00</span></h2>
+  </div>
+
+  <script>
+    function calculateDiscount() {
+      var originalPrice = parseFloat(document.getElementById("originalPrice").value);
+      var discountPercentage = parseFloat(document.getElementById("discountPercentage").value);
+
+      if (isNaN(originalPrice) || isNaN(discountPercentage)) {
+        alert("Please enter valid numbers for both original price and discount percentage.");
+        return;
+      }
+
+      var discountAmount = (originalPrice * discountPercentage) / 100;
+      var discountedPrice = originalPrice - discountAmount;
+
+      document.getElementById("discountedPrice").textContent = discountedPrice.toFixed(2);
+    }
+  </script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Discount Price Calculator</title>
+
+</head>
+
+<body>
+  <h1>Discount Price Calculator</h1>
+
+  <p>Original Price: <input type="number" id="originalPrice"></p>
+  <p>Discount Percentage: <input type="number" id="discountPercentage"></p>
+  <button onclick="calculateDiscount()">Calculate Discount</button>
+
+  <p id="discountedPrice"></p>
+
+  <script>
+    function calculateDiscount() {
+      // Get input values
+      var originalPrice = parseFloat(document.getElementById('originalPrice').value);
+      var discountPercentage = parseFloat(document.getElementById('discountPercentage').value);
+
+      // Calculate discounted price
+      var discountAmount = (originalPrice * discountPercentage) / 100;
+      var discountedPrice = originalPrice - discountAmount;
+
+      // Display discounted price
+      document.getElementById('discountedPrice').innerHTML = "Discounted Price: $" + discountedPrice.toFixed(2);
+    }
+  </script>
+</body>
+
+</html>
