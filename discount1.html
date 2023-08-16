@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-800">
+
+
+  <div class="w-[60%] mx-auto grid grid-cols-2">
+    <div class="bg-violet-900 text-center mt-6 w-[400px] px-8 mx-auto py-8 rounded-lg">
+      <h2 class="pb-2 text-white font-semibold">Product Price</h2>
+      <input class="px-6 w-[300px] text-center rounded-lg" type="number" name="" id="priceField"
+        placeholder="please enter product price">
+    </div>
+
+
+
+    <div class="bg-violet-900 text-center mt-6 w-[400px] px-8 mx-auto py-8 rounded-lg">
+      <h2 class="pb-2 text-white font-semibold">Discount</h2>
+      <input class="px-6 w-[300px] text-center rounded-lg" type="number" name="" id="discountField"
+        placeholder="please enter discount percent">
+    </div>
+  </div>
+
+
+
+  <div class="mx-auto text-center mt-4">
+    <button id="btn-calculate"
+      class="bg-cyan-600 hover:bg-indigo-700 px-8 rounded-lg text-white font-semibold py-2">Calculate</button>
+  </div>
+
+
+
+  <div class="bg-emerald-400 text-center mt-6 w-[400px] px-8 mx-auto py-8 rounded-lg">
+    <h class="pb-2 text-white font-semibold">Discounted Price</h>
+    <p class="text-rose-600 font-semibold" id="discountedField"></p>
+  </div>
+
+
+
+  <script src="discount1.js"></script>
+</body>
+
+</html>

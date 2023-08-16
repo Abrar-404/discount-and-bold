@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Discount Price Calculator</title>
+</head>
+
+<body>
+  <h2>Discount Price Calculator</h2>
+
+  <input type="text" id="couponField" placeholder="Enter coupon code">
+  <button id="applyCoupon">Apply Coupon</button>
+
+  <br>
+
+  <input type="number" id="priceField" placeholder="Enter product price">
+
+  <h3>Discounted Price: <span id="discountedPrice">-</span></h3>
+
+  <!-- <script>
+    document.getElementById("applyCoupon").addEventListener("click", function () {
+      // var couponCode = document.getElementById("couponField").value;
+      const couponField = document.getElementById('couponField');
+      const couponFieldString = couponField.value;
+      const coupon = parseFloat(couponFieldString);
+
+
+      // var price = parseFloat(document.getElementById("priceField").value);
+
+      const priceField = document.getElementById('priceField');
+      const priceFieldString = priceField.value;
+      const priceTotal = parseFloat(priceFieldString);
+
+
+      // var discountedPriceElement = document.getElementById("discountedPrice");
+
+      const discountedTotal = document.getElementById('discountedPrice');
+
+      if (couponCode === "DIS 3") {
+        var discountedPrice = priceTotal * 0.97;// 3% discount
+        discountedPriceTotal.textContent = discountedPrice.toFixed(2);
+      } else {
+        discountedPriceTotal.textContent = "-";
+      }
+    });
+  </script> -->
+  <script src="coupon.js"></script>
+</body>
+
+</html>

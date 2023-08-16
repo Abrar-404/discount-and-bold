@@ -1,23 +1,49 @@
-// Get references to the input fields and the calculate button
-const originalPriceInput = document.getElementById("originalPrice");
-const discountPercentageInput = document.getElementById("discountPercentage");
-const calculateButton = document.getElementById("calculateButton");
-const discountedPriceOutput = document.getElementById("discountedPrice");
+// document.getElementById('calculateButton').addEventListener('click', function(){
+  
+//   const originalPrice = document.getElementById('originalPrice');
+//   const originalPriceString = originalPrice.value;
+//   const originalTotalPrice = parseFloat(originalPriceString);
+  
+//   const discountPercentage = document.getElementById('discountPercentage');
+//   const discountPercentageString = discountPercentage.value;
+//   const discountTotalPercentage = parseFloat(discountPercentageString);
+  
+// if(!isNaN(originalTotalPrice) && !isNaN(discountTotalPercentage)){
+  
+//     const discountAmount = (discountTotalPercentage / 100) * originalTotalPrice;
+  
+//     const discountTotal = originalTotalPrice - discountAmount;
+  
+//     const discountedPriceOutput = document.getElementById('discountedPrice');
 
-// Add an event listener to the calculate button
-calculateButton.addEventListener("click", calculateDiscountedPrice);
+    
+//     discountedPriceOutput.innerText = `Discounted Price: $${discountTotal.toFixed(2)};`
+// } else {
+//   discountedPriceOutput.innerText = "please provide valid number";
+// }
+  
+// })
 
-// Function to calculate and display the discounted price
-function calculateDiscountedPrice() {
-    const originalPrice = parseFloat(originalPriceInput.value);
-    const discountPercentage = parseFloat(discountPercentageInput.value);
 
-    if (!isNaN(originalPrice) && !isNaN(discountPercentage)) {
-        const discountAmount = (discountPercentage / 100) * originalPrice;
-        const discountedPrice = originalPrice - discountAmount;
+document.getElementById('calculateButton').addEventListener('click', function () {
+  const originalPrice = document.getElementById('originalPrice');
+  const originalPriceString = originalPrice.value;
+  const originalTotalPrice = parseFloat(originalPriceString);
 
-        discountedPriceOutput.textContent = `Discounted Price: $${discountedPrice.toFixed(2)}`;
-    } else {
-        discountedPriceOutput.textContent = "Please enter valid numbers.";
-    }
-}
+  const discountPercentage = document.getElementById('discountPercentage');
+  const discountPercentageString = discountPercentage.value;
+  const discountTotalPercentage = parseFloat(discountPercentageString);
+
+  const discountedPriceOutput = document.getElementById('discountedPrice');
+
+
+  if (!isNaN(originalTotalPrice) && !isNaN(discountTotalPercentage)) {
+    const discountAmount = (discountTotalPercentage / 100) * originalTotalPrice;
+
+    const discountTotal = originalTotalPrice - discountAmount;
+
+    discountedPriceOutput.innerText = discountTotal.toFixed(2);    
+  } else {
+    discountedPriceOutput.innerText = 'Please Provide valid number'
+  }
+})
